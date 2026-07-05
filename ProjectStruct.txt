@@ -1,0 +1,32 @@
+AASLGame/
+├─ main.py                       # Entry point
+├─ core/
+│   ├─ camera.py                 # Webcam handling
+│   ├─ detector.py               # MediaPipe hand detection
+│   ├─ predictor.py              # ML model prediction
+│   └─ game_logic.py             # Learn/Test logic
+├─ ui/
+│   ├─ main_menu.py              # Main menu GUI
+│   ├─ learn_mode.py             # Learn mode GUI
+│   ├─ test_mode.py              # Test mode GUI
+│   └─ widgets.py                # Common GUI widgets
+├─ utils/
+│   ├─ config.py                 # Constants (characters, settings)
+│   ├─ resource_path.py          # PyInstaller-safe paths
+│   └─ storage.py                # Load/save highscore
+├─ assets/
+│   ├─ models/
+│   │   ├─ asl_model.p           # Your trained RandomForest model
+│   │   └─ hand_landmarker.task  # MediaPipe hand model
+│   ├─ data/
+│   │   ├─ labels.json           # Class labels (A-Z, 0-9)
+│   │   └─ highscore.json        # Persistent scores
+│   ├─ raw_data/
+│   │   └─ data.pickle           # Original dataset for training
+│   ├─ images/
+│   │   └─ letters/              # Optional: letter reference images
+│   └─ audio/
+│       └─ bg_music.mp3           # Optional: background music
+├─ requirements.txt
+├─ README.md
+└─ .gitignore
